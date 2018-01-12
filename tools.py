@@ -44,7 +44,7 @@ class dw_file() :#下载一些图片的类
         n = 0
         while 10 >= n :
             try :
-                req = requests.get(self.u,stream = True)
+                req = requests.get(self.u)
             except Exception :
                 req = False
                 print('蜜汁错误重新尝试')
@@ -77,7 +77,7 @@ class dw_file() :#下载一些图片的类
         else :
             self.name = name
 #dw = dw_file('https://www.baidu.com/img/bd_logo1.png',dir = './ssd/')
-#dw.dw()用法一个必须的参数下载文件的url可选参数文件的名字name和文件存储的dir
+#dw.dw()#用法一个必须的参数下载文件的url可选参数文件的名字name和文件存储的dir
 #定义完不会立即下载要用dw()方法这样写方便在下载之前修改
 class test_tag() :#尝试一个html元素存在不存在的类
     def __init__(self,bs4_obj,tag) :
